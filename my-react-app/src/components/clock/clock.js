@@ -6,6 +6,7 @@ class Clock extends React.Component {
         this.state = {date: new Date()};
     }
 
+    //组件被挂载
     componentDidMount() {
         this.timerID = setInterval(
             () => this.tick(),
@@ -13,6 +14,7 @@ class Clock extends React.Component {
         );
     }
 
+    //组件被卸载
     componentWillUnmount() {
         clearInterval(this.timerID);
     }
